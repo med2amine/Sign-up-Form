@@ -26,27 +26,38 @@
         </div>
         <div id="second-div">
             <h2>Let's do this!</h2>
-            <div id="form-wrapper">
-                <div class="field">
-                    <form action="example.com/path" method="post">
-                    <label for="first-name">first name : </label>
-                </div>
-                <div class="field">
-                    <input type="text" id="first-name" name="first-name">
-                    <label for="last-name">last name : </label>
-                </div>
-                <div class="field">
-                    <input type="text" name="last-name" id="last-name">
-                    <label for="email">email</label>
-                </div>
-                <div class="field"></div>
-                <input type="email" name="email" id="email">
-                <label for="phone-number">phone number : </label>
-                <input type="tel" name="phone-number" id="phone-number">
-                <label for="password">password</label>
-                <input type="password" id="password" name="password">
-                <label for="confirm-password">confirm password</label>
-                <input type="password" name="confirm-password" id="confirm-password">
+            <div id="form-wrapper"> 
+                <form action="example.com/path" method="post">
+                 <div class="field">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                        <span class="error-message" id="first-name-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name" required>
+                        <span class="error-message" id="last-name-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="phone-number">Phone Number</label>
+                        <input type="tel" name="phone-number" id="phone-number" pattern="[0-9]{10,}">
+                        <span class="error-message" id="phone-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required minlength="8">
+                        <span class="error-message" id="password-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" name="confirm-password" id="confirm-password" required>
+                        <span class="error-message" id="confirm-error"></span>
+                    </div>   
                 </form>
             </div>   
         </div>
@@ -55,5 +66,6 @@
             <p>Already have an account ? <a href="">Log in</a></p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
